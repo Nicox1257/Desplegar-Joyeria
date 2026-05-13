@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Luxara Joyería</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="public/logo.png" type="image/png">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="productos.html?categoria=cadenas" class="top-bar-link">Cadenas</a>
+                <a href="productos.html?categoria=pulseras" class="top-bar-link">Pulseras</a>
+                <a href="productos.html?categoria=aretes" class="top-bar-link">Aretes</a>
+                <a href="productos.html?categoria=anillos" class="top-bar-link">Anillos</a>
+                <a href="productos.html?categoria=dijes" class="top-bar-link">Dijes</a>
+                <a href="productos.html?ofertas=true" class="top-bar-link sale">Ofertas</a>
+                <a href="productos.html?nuevos=true" class="top-bar-link highlight">Nuevos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="public/logo.png" alt="Luxara Joyeria">
+                </a>
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">
+                            Productos
+                            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+                            <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+                            <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+                            <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+                            <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+                            <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+                            <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+                            <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+                            <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+                            <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+                            <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+                        </div>
+                    </div>
+                    <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="productos.html?ofertas=true" class="nav-link nav-ofertas">Ofertas</a>
+                    <a href="productos.html?nuevos=true" class="nav-link nav-nuevos">Nuevos</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="lista-deseos.html" class="icon-button" title="Lista de Deseos">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        <span class="wishlist-badge" id="wishlistBadge">0</span>
+                    </a>
+                    <a href="carrito.html" class="icon-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 2L7 6H3L6 20H18L21 6H17L15 2H9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="20" r="1"/><circle cx="15" cy="20" r="1"/>
+                        </svg>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="nav-dropdown-mobile">
+                    <button class="nav-link dropdown-toggle-mobile">Productos</button>
+                    <div class="dropdown-menu-mobile">
+                        <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+                        <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+                        <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+                        <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+                        <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+                        <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+                        <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+                        <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+                        <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+                        <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+                        <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+                    </div>
+                </div>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario de Registro -->
+    <main style="min-height:80vh; display:flex; align-items:center; justify-content:center; padding:2rem">
+        <div style="background:white; padding:2.5rem; border-radius:1rem;
+                    box-shadow:0 4px 24px rgba(0,0,0,.1); width:100%; max-width:460px">
+
+            <div style="text-align:center; margin-bottom:2rem">
+                <a href="index.html">
+                    <img src="public/logo.png" alt="Luxara" style="height:50px; margin-bottom:.5rem">
+                </a>
+                <h1 style="font-size:1.5rem; font-weight:600">Crear Cuenta</h1>
+                <p style="color:#888; font-size:.9rem">Únete a Luxara Joyería</p>
+            </div>
+
+            <div id="registerError" class="error-message"
+                 style="display:none; color:#dc2626; background:#fef2f2;
+                        padding:.75rem; border-radius:.5rem; margin-bottom:1rem; font-size:.9rem"></div>
+
+            <form id="registerForm">
+                <div class="form-group" style="margin-bottom:1rem">
+                    <label style="display:block; font-weight:500; margin-bottom:.4rem">
+                        Nombre completo *
+                    </label>
+                    <input type="text" id="regNombre" class="form-input"
+                           placeholder="Tu nombre" required style="width:100%">
+                </div>
+
+                <div class="form-group" style="margin-bottom:1rem">
+                    <label style="display:block; font-weight:500; margin-bottom:.4rem">
+                        Correo electrónico *
+                    </label>
+                    <input type="email" id="regEmail" class="form-input"
+                           placeholder="correo@ejemplo.com" required style="width:100%">
+                </div>
+
+                <div class="form-group" style="margin-bottom:1rem">
+                    <label style="display:block; font-weight:500; margin-bottom:.4rem">
+                        Contraseña * <small style="color:#888">(mín. 6 caracteres)</small>
+                    </label>
+                    <input type="password" id="regPassword" class="form-input"
+                           placeholder="Crea una contraseña" required style="width:100%">
+                </div>
+
+                <div class="form-group" style="margin-bottom:1rem">
+                    <label style="display:block; font-weight:500; margin-bottom:.4rem">
+                        Teléfono
+                    </label>
+                    <input type="tel" id="regTelefono" class="form-input"
+                           placeholder="+57 300 000 0000" style="width:100%">
+                </div>
+
+                <div class="form-group" style="margin-bottom:1.5rem">
+                    <label style="display:block; font-weight:500; margin-bottom:.4rem">
+                        Dirección
+                    </label>
+                    <input type="text" id="regDireccion" class="form-input"
+                           placeholder="Tu dirección" style="width:100%">
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-block"
+                        style="width:100%; padding:.85rem">
+                    Crear Cuenta
+                </button>
+
+                <p style="text-align:center; margin-top:1rem; font-size:.9rem; color:#666">
+                    ¿Ya tienes cuenta?
+                    <a href="index.html" style="color:var(--color-gold,#b8860b); font-weight:500">
+                        Inicia sesión
+                    </a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const errorEl = document.getElementById("registerError");
+            const btn     = document.getElementById("submitBtn");
+
+            btn.disabled = true;
+            btn.textContent = "Creando cuenta...";
+            errorEl.style.display = "none";
+
+            try {
+                const data = await AuthAPI.registro(
+                    document.getElementById("regNombre").value,
+                    document.getElementById("regEmail").value,
+                    document.getElementById("regPassword").value,
+                    document.getElementById("regTelefono").value,
+                    document.getElementById("regDireccion").value
+                );
+                // Sync local wishlist to server after registration
+                if (typeof syncWishlistOnLogin === "function") {
+                    await syncWishlistOnLogin();
+                }
+                window.location.href = "index.html";
+            } catch (err) {
+                errorEl.textContent = err.message;
+                errorEl.style.display = "block";
+                btn.disabled = false;
+                btn.textContent = "Crear Cuenta";
+            }
+        });
+    </script>
+</body>
+</html>

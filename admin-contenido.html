@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido — Luxara Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="public/logo.png" type="image/png">
+</head>
+<body class="admin-page">
+
+  <!-- SIDEBAR -->
+  <aside class="lx-sidebar">
+    <div class="lx-sidebar-logo">
+      <img src="public/logo.png" alt="Luxara">
+      <div class="lx-sidebar-logo-text">
+        <span class="lx-sidebar-logo-name">Luxara</span>
+        <span class="lx-sidebar-logo-sub">Panel de Control</span>
+      </div>
+    </div>
+    <nav class="lx-nav">
+      <span class="lx-nav-label">Principal</span>
+      <a href="admin.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Inicio
+      </a>
+      <a href="admin-productos.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Productos
+      </a>
+      <a href="admin-contenido.html" class="lx-nav-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Contenido
+      </a>
+      <a href="admin-configuracion.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Configuración
+      </a>
+      <div class="lx-nav-divider"></div>
+      <a href="index.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Ver Sitio
+      </a>
+    </nav>
+    <div class="lx-sidebar-footer">
+      <button class="lx-nav-link lx-btn-danger" id="logoutBtn" style="border:none;cursor:pointer;width:100%">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Cerrar Sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="lx-main">
+    <div class="lx-topbar">
+      <div>
+        <div class="lx-topbar-title">Gestión de Contenido</div>
+        <div class="lx-topbar-subtitle">Edita los textos y datos de tu tienda</div>
+      </div>
+      <div class="lx-topbar-right">
+        <span class="lx-admin-badge">✦ Admin</span>
+      </div>
+    </div>
+
+    <div class="lx-content">
+      <div class="lx-content-grid">
+
+        <!-- Sobre Nosotros -->
+        <div class="lx-content-card">
+          <div class="lx-content-card-head">
+            <div class="lx-content-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              Sobre Nosotros
+            </div>
+            <span class="lx-content-card-badge">nosotros.html</span>
+          </div>
+          <div class="lx-content-card-body">
+            <div class="lx-form-group">
+              <label class="lx-form-label">Título Principal</label>
+              <input type="text" id="aboutTitle" class="lx-input" placeholder="Sobre Luxara" value="Sobre Luxara">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Subtítulo</label>
+              <input type="text" id="aboutSubtitle" class="lx-input"
+                placeholder="Elegancia, calidad y pasión en cada joya"
+                value="Elegancia, calidad y pasión en cada joya">
+            </div>
+            <button class="lx-btn lx-btn-gold" style="width:100%;margin-top:.25rem" onclick="saveAboutContent()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+
+        <!-- Contacto -->
+        <div class="lx-content-card">
+          <div class="lx-content-card-head">
+            <div class="lx-content-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.09v2.83z"/></svg>
+              Contacto
+            </div>
+            <span class="lx-content-card-badge">contacto.html</span>
+          </div>
+          <div class="lx-content-card-body">
+            <div class="lx-form-group">
+              <label class="lx-form-label">Título</label>
+              <input type="text" id="contactTitle" class="lx-input" value="Contáctanos">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Subtítulo</label>
+              <input type="text" id="contactSubtitle" class="lx-input"
+                value="Estamos aquí para ayudarte. Escríbenos y te responderemos pronto.">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Teléfono</label>
+              <input type="text" id="contactPhone" class="lx-input" value="+57 324 557 3332">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Email</label>
+              <input type="email" id="contactEmail" class="lx-input" value="luxarajoyeria@gmail.com">
+            </div>
+            <button class="lx-btn lx-btn-gold" style="width:100%;margin-top:.25rem" onclick="saveContactContent()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+
+        <!-- Empresa -->
+        <div class="lx-content-card">
+          <div class="lx-content-card-head">
+            <div class="lx-content-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              Información de Empresa
+            </div>
+            <span class="lx-content-card-badge">General</span>
+          </div>
+          <div class="lx-content-card-body">
+            <div class="lx-form-group">
+              <label class="lx-form-label">Nombre</label>
+              <input type="text" id="companyName" class="lx-input" value="Luxara Joyería">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Descripción breve</label>
+              <textarea id="companyDescription" class="lx-textarea" rows="2">Elegancia y distinción en cada pieza</textarea>
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Dirección (Footer)</label>
+              <input type="text" id="companyAddress" class="lx-input" value="Villavicencio, Colombia">
+            </div>
+            <button class="lx-btn lx-btn-gold" style="width:100%;margin-top:.25rem" onclick="saveCompanyContent()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="lx-content-card">
+          <div class="lx-content-card-head">
+            <div class="lx-content-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Redes Sociales
+            </div>
+            <span class="lx-content-card-badge">URLs</span>
+          </div>
+          <div class="lx-content-card-body">
+            <div class="lx-form-group">
+              <label class="lx-form-label">Instagram</label>
+              <input type="url" id="socialInstagram" class="lx-input"
+                placeholder="https://instagram.com/…" value="https://instagram.com/luxarajoyeria">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">Facebook</label>
+              <input type="url" id="socialFacebook" class="lx-input"
+                placeholder="https://facebook.com/…" value="https://facebook.com/luxarajoyeria">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">TikTok</label>
+              <input type="url" id="socialTiktok" class="lx-input"
+                placeholder="https://tiktok.com/…" value="https://tiktok.com/@luxarajoyeria">
+            </div>
+            <div class="lx-form-group">
+              <label class="lx-form-label">WhatsApp</label>
+              <input type="url" id="socialWhatsapp" class="lx-input"
+                placeholder="https://wa.me/…" value="https://wa.me/573245573332">
+            </div>
+            <button class="lx-btn lx-btn-gold" style="width:100%;margin-top:.25rem" onclick="saveSocialContent()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    if (!isLoggedIn() || !isAdmin()) window.location.href = 'index.html';
+
+    document.addEventListener('DOMContentLoaded', loadContent);
+
+    function loadContent() {
+      const c = JSON.parse(localStorage.getItem('siteContent') || '{}');
+      if (c.about) {
+        document.getElementById('aboutTitle').value = c.about.title || 'Sobre Luxara';
+        document.getElementById('aboutSubtitle').value = c.about.subtitle || '';
+      }
+      if (c.contact) {
+        document.getElementById('contactTitle').value = c.contact.title || 'Contáctanos';
+        document.getElementById('contactSubtitle').value = c.contact.subtitle || '';
+        document.getElementById('contactPhone').value = c.contact.phone || '+57 324 557 3332';
+        document.getElementById('contactEmail').value = c.contact.email || 'luxarajoyeria@gmail.com';
+      }
+      if (c.company) {
+        document.getElementById('companyName').value = c.company.name || 'Luxara Joyería';
+        document.getElementById('companyDescription').value = c.company.description || '';
+        document.getElementById('companyAddress').value = c.company.address || 'Villavicencio, Colombia';
+      }
+      if (c.social) {
+        document.getElementById('socialInstagram').value = c.social.instagram || '';
+        document.getElementById('socialFacebook').value  = c.social.facebook  || '';
+        document.getElementById('socialTiktok').value    = c.social.tiktok    || '';
+        document.getElementById('socialWhatsapp').value  = c.social.whatsapp  || '';
+      }
+    }
+
+    function save(key, data) {
+      const c = JSON.parse(localStorage.getItem('siteContent') || '{}');
+      c[key] = data;
+      localStorage.setItem('siteContent', JSON.stringify(c));
+    }
+
+    function saveAboutContent() {
+      save('about', {
+        title: document.getElementById('aboutTitle').value,
+        subtitle: document.getElementById('aboutSubtitle').value
+      });
+      showNotification('Sección "Nosotros" guardada correctamente', 'success');
+    }
+
+    function saveContactContent() {
+      save('contact', {
+        title: document.getElementById('contactTitle').value,
+        subtitle: document.getElementById('contactSubtitle').value,
+        phone: document.getElementById('contactPhone').value,
+        email: document.getElementById('contactEmail').value
+      });
+      showNotification('Información de contacto guardada correctamente', 'success');
+    }
+
+    function saveCompanyContent() {
+      save('company', {
+        name: document.getElementById('companyName').value,
+        description: document.getElementById('companyDescription').value,
+        address: document.getElementById('companyAddress').value
+      });
+      showNotification('Información de empresa guardada correctamente', 'success');
+    }
+
+    function saveSocialContent() {
+      save('social', {
+        instagram: document.getElementById('socialInstagram').value,
+        facebook: document.getElementById('socialFacebook').value,
+        tiktok: document.getElementById('socialTiktok').value,
+        whatsapp: document.getElementById('socialWhatsapp').value
+      });
+      showNotification('Redes sociales guardadas correctamente', 'success');
+    }
+
+    document.getElementById('logoutBtn')?.addEventListener('click', () => {
+      if (confirm('¿Cerrar sesión?')) AuthAPI.logout();
+    });
+
+    function showNotification(msg, type = 'success') {
+      document.querySelectorAll('.lx-toast').forEach(t => t.remove());
+      const colors = { success:'#059669', error:'#dc2626', info:'#2563eb' };
+      const n = document.createElement('div');
+      n.className = 'lx-toast ' + type;
+      n.style.borderLeftColor = colors[type] || colors.success;
+      n.innerHTML = `<span>${msg}</span>`;
+      document.body.appendChild(n);
+      setTimeout(() => n.remove(), 3500);
+    }
+  </script>
+</body>
+</html>

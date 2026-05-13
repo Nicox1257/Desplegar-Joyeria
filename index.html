@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxara Joyería - Elegancia y Distinción en Cada Pieza</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="public/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Top Bar (Barra Negra Superior) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="productos.html?categoria=cadenas" class="top-bar-link">Cadenas</a>
+                <a href="productos.html?categoria=pulseras" class="top-bar-link">Pulseras</a>
+                <a href="productos.html?categoria=aretes" class="top-bar-link">Aretes</a>
+                <a href="productos.html?categoria=anillos" class="top-bar-link">Anillos</a>
+                <a href="productos.html?categoria=dijes" class="top-bar-link">Dijes</a>
+                <a href="productos.html?ofertas=true" class="top-bar-link sale">Ofertas</a>
+                <a href="productos.html?nuevos=true" class="top-bar-link highlight">Nuevos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="public/logo.png" alt="Luxara Joyería">
+                </a>
+
+                <!-- Navegación Desktop -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    
+                    <!-- Dropdown de Productos -->
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">
+                            Productos
+                            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+                            <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+                            <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+                            <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+                            <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+                            <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+                            <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+                            <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+                            <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+                            <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+                            <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+                        </div>
+                    </div>
+                    
+                    <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="productos.html?ofertas=true" class="nav-link nav-ofertas">Ofertas</a>
+                    <a href="productos.html?nuevos=true" class="nav-link nav-nuevos">Nuevos</a>
+                </nav>
+
+                <!-- Acciones del Header -->
+                <div class="header-actions">
+                    <!-- Búsqueda -->
+                    <button class="icon-button" id="searchBtn" title="Buscar">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </button>
+
+                    <!-- Lista de Deseos -->
+                    <a href="lista-deseos.html" class="icon-button" id="wishlistBtn" title="Lista de Deseos">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        <span class="wishlist-badge" id="wishlistBadge">0</span>
+                    </a>
+
+                    <!-- Carrito -->
+                    <a href="carrito.html" class="icon-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 2L7 6H3L6 20H18L21 6H17L15 2H9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="20" r="1"/>
+                            <circle cx="15" cy="20" r="1"/>
+                        </svg>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+
+                    <!-- Admin/User Login -->
+                    <button class="icon-button" id="adminLoginBtn" title="Mi Cuenta">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </button>
+
+                    <!-- Menú Mobile Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navegación Mobile -->
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <div class="nav-dropdown-mobile">
+                    <button class="nav-link dropdown-toggle-mobile">Productos</button>
+                    <div class="dropdown-menu-mobile">
+                        <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+                        <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+                        <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+                        <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+                        <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+                        <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+                        <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+                        <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+                        <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+                        <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+                        <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+                    </div>
+                </div>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" id="heroCarousel">
+        <div class="carousel-slides" id="carouselSlides">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <img src="public/carousel/conjunto-joyas.jpg" alt="Conjunto de Joyería Luxara">
+                <div class="carousel-overlay">
+                    <h1 class="carousel-title">El Brillo del <span class="gold">Oro Laminado</span></h1>
+                    <p class="carousel-subtitle">está en cómo te hace sentir</p>
+                    <p class="carousel-description">Descubre nuestra colección exclusiva de joyería fina que realza tu belleza natural</p>
+                    <a href="productos.html" class="carousel-btn">Compra Ahora</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="public/carousel/cadena-gucci.jpg" alt="Cadena Tejido Gucci">
+                <div class="carousel-overlay">
+                    <h1 class="carousel-title">Elegancia <span class="gold">Atemporal</span></h1>
+                    <p class="carousel-subtitle">Joyas que cuentan tu historia</p>
+                    <p class="carousel-description">Cadenas con acabados de la más alta calidad para cada ocasión especial</p>
+                    <a href="productos.html?categoria=cadenas" class="carousel-btn">Ver Cadenas</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="public/carousel/pulsera-roja.jpg" alt="Pulsera Tejida">
+                <div class="carousel-overlay">
+                    <h1 class="carousel-title">Fe y <span class="gold">Protección</span></h1>
+                    <p class="carousel-subtitle">Símbolos que inspiran</p>
+                    <p class="carousel-description">Pulseras tejidas con detalles en oro que llevan contigo tu espiritualidad</p>
+                    <a href="productos.html?categoria=pulseras" class="carousel-btn">Ver Pulseras</a>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+                <img src="public/carousel/cruz-esmeralda.jpg" alt="Cruz con Esmeraldas">
+                <div class="carousel-overlay">
+                    <h1 class="carousel-title">Dijes con <span class="gold">Alma</span></h1>
+                    <p class="carousel-subtitle">Piezas únicas con piedras preciosas</p>
+                    <p class="carousel-description">Cruces y dijes elaborados con esmeraldas colombianas auténticas</p>
+                    <a href="productos.html?categoria=dijes" class="carousel-btn">Ver Dijes</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Navigation Dots -->
+        <div class="carousel-nav" id="carouselNav">
+            <button class="carousel-dot active" data-slide="0"></button>
+            <button class="carousel-dot" data-slide="1"></button>
+            <button class="carousel-dot" data-slide="2"></button>
+            <button class="carousel-dot" data-slide="3"></button>
+        </div>
+
+        <!-- Carousel Arrows -->
+        <div class="carousel-arrows">
+            <button class="carousel-arrow" id="prevSlide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="carousel-arrow" id="nextSlide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>✦ Oro Laminado 18K</span>
+            <span>✦ Envíos a Todo Colombia</span>
+            <span>✦ Calidad Garantizada</span>
+            <span>✦ Diseños Exclusivos</span>
+            <span>✦ Más de 200 Referencias</span>
+            <span>✦ Brillo Duradero</span>
+            <span>✦ Oro Laminado 18K</span>
+            <span>✦ Envíos a Todo Colombia</span>
+            <span>✦ Calidad Garantizada</span>
+            <span>✦ Diseños Exclusivos</span>
+            <span>✦ Más de 200 Referencias</span>
+            <span>✦ Brillo Duradero</span>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title" data-reveal>¿Por qué elegir Luxara?</h2>
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card" data-reveal>
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L28 16L40 20L28 24L24 36L20 24L8 20L20 16L24 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Oro Laminado Premium</h3>
+                    <p class="benefit-description">
+                        Utilizamos oro laminado de 18K con técnicas especializadas que garantizan durabilidad y brillo excepcional.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card" data-reveal="delay-1">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 28L20 24L24 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="32" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Envíos Seguros</h3>
+                    <p class="benefit-description">
+                        Enviamos a todo el país con embalaje especializado y seguimiento en tiempo real de tu pedido.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card" data-reveal="delay-2">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M16 24L20 28L32 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">100% Garantizado</h3>
+                    <p class="benefit-description">
+                        Garantía de satisfacción total. Si no quedas conforme, te devolvemos tu dinero sin preguntas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explora Nuestras Categorías</h2>
+            <p class="section-subtitle">Encuentra la joya perfecta para cada ocasión</p>
+            
+            <div class="categories-grid">
+                <!-- Cadenas -->
+                <a href="productos.html?categoria=cadenas" class="category-card">
+                    <div class="category-image">
+                        <img src="public/elegant-gold-chains-on-white-marble.jpg" alt="Cadenas">
+                    </div>
+                    <h3 class="category-title">Cadenas</h3>
+                    <p class="category-description">Elegancia en cada eslabón</p>
+                </a>
+
+                <!-- Anillos -->
+                <a href="productos.html?categoria=anillos" class="category-card">
+                    <div class="category-image">
+                        <img src="public/elegant-gold-plated-rings-on-black-display.jpg" alt="Anillos">
+                    </div>
+                    <h3 class="category-title">Anillos</h3>
+                    <p class="category-description">Símbolos de compromiso y estilo</p>
+                </a>
+
+                <!-- Pulseras -->
+                <a href="productos.html?categoria=pulseras" class="category-card">
+                    <div class="category-image">
+                        <img src="public/sophisticated-gold-plated-bracelets-on-marble.jpg" alt="Pulseras">
+                    </div>
+                    <h3 class="category-title">Pulseras</h3>
+                    <p class="category-description">Sofisticación en tu muñeca</p>
+                </a>
+
+                <!-- Aretes -->
+                <a href="productos.html?categoria=aretes" class="category-card">
+                    <div class="category-image">
+                        <img src="public/brilliant-gold-plated-earrings-on-elegant-stand.jpg" alt="Aretes">
+                    </div>
+                    <h3 class="category-title">Aretes</h3>
+                    <p class="category-description">Brillo que ilumina tu rostro</p>
+                </a>
+
+                <!-- Dijes -->
+                <a href="productos.html?categoria=dijes" class="category-card">
+                    <div class="category-image">
+                        <img src="public/elegant-gold-plated-jewelry-necklaces-bracelets-on.jpg" alt="Dijes">
+                    </div>
+                    <h3 class="category-title">Dijes</h3>
+                    <p class="category-description">Piezas únicas con alma</p>
+                </a>
+
+                <!-- Camándulas -->
+                <a href="productos.html?categoria=camandulas" class="category-card">
+                    <div class="category-image">
+                        <img src="public/elegant-gold-pattern.png" alt="Camándulas">
+                    </div>
+                    <h3 class="category-title">Camándulas</h3>
+                    <p class="category-description">Fe y devoción en oro laminado</p>
+                </a>
+
+                <!-- Manillas -->
+                <a href="productos.html?categoria=manillas" class="category-card">
+                    <div class="category-image">
+                        <img src="public/pulseras-de-oro-sofisticadas.jpg" alt="Manillas">
+                    </div>
+                    <h3 class="category-title">Manillas</h3>
+                    <p class="category-description">Estilo y carácter en tu muñeca</p>
+                </a>
+
+                <!-- Tobilleras -->
+                <a href="productos.html?categoria=tobilleras" class="category-card">
+                    <div class="category-image">
+                        <img src="public/elegant-gold-chains-on-white-marble.jpg" alt="Tobilleras">
+                    </div>
+                    <h3 class="category-title">Tobilleras</h3>
+                    <p class="category-description">Detalles dorados en cada paso</p>
+                </a>
+            </div>
+
+            <div style="text-align:center;margin-top:2rem">
+                <a href="productos.html" class="btn btn-secondary" style="border:1px solid var(--color-gold);color:var(--color-gold-dark)">
+                    Ver todas las categorías →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craft Banner -->
+    <section class="craft-banner">
+        <div class="container">
+            <div class="craft-banner-inner">
+                <div class="craft-badge" data-reveal>✦ Nuestra Promesa</div>
+                <h2 class="craft-title" data-reveal>Cada pieza, una obra<br>de <span>arte en oro</span></h2>
+                <p class="craft-text" data-reveal="delay-1">Elaboramos cada joya con los más altos estándares de calidad, utilizando técnicas de laminado de oro 18K que garantizan un brillo duradero y una resistencia excepcional para el uso diario.</p>
+                <a href="nosotros.html" class="craft-btn" data-reveal="delay-2">Conoce nuestra historia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="featuredProductsSection">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Productos Destacados</h2>
+            <p class="section-subtitle" data-reveal>Descubre nuestras piezas más exclusivas</p>
+            
+            <div class="products-grid" id="featuredProductsGrid">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo y descripción -->
+                <div class="footer-section">
+                    <img src="public/logo.png" alt="Luxara" class="footer-logo">
+                    <p class="footer-text">Elegancia y distinción en cada pieza de joyería. Oro laminado de la más alta calidad.</p>
+                </div>
+
+                <!-- Enlaces rápidos -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="lista-deseos.html">Lista de Deseos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                            </svg>
+                            <span>+57 324 557 3332</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                            <span>luxarajoyeria@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/luxarajoyeria" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/luxarajoyeria" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@luxarajoyeria" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/573245573332" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxara Joyería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Iniciar Sesión</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Correo electrónico</label>
+                    <input type="email" id="adminEmail" class="form-input"
+                           placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Contraseña</label>
+                    <input type="password" id="adminPassword" class="form-input"
+                           placeholder="Tu contraseña" required>
+                </div>
+                <div class="error-message" id="loginError"></div>
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                <p style="text-align:center;margin-top:.8rem;font-size:.9rem">
+                  ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="search-close" id="searchClose" aria-label="Cerrar búsqueda">&times;</button>
+        <div class="search-overlay-inner">
+            <form class="search-form" id="searchForm">
+                <input type="text" class="search-input" id="searchInput"
+                       placeholder="Busca cadenas, anillos, pulseras..." autocomplete="off">
+                <button type="submit" class="search-submit" aria-label="Buscar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </button>
+            </form>
+            <p class="search-hint">Presiona Enter para buscar o Esc para cerrar</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

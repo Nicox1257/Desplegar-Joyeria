@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — Luxara Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="public/logo.png" type="image/png">
+</head>
+<body class="admin-page">
+
+  <!-- SIDEBAR -->
+  <aside class="lx-sidebar">
+    <div class="lx-sidebar-logo">
+      <img src="public/logo.png" alt="Luxara">
+      <div class="lx-sidebar-logo-text">
+        <span class="lx-sidebar-logo-name">Luxara</span>
+        <span class="lx-sidebar-logo-sub">Panel de Control</span>
+      </div>
+    </div>
+    <nav class="lx-nav">
+      <span class="lx-nav-label">Principal</span>
+      <a href="admin.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Inicio
+      </a>
+      <a href="admin-productos.html" class="lx-nav-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Productos
+      </a>
+      <a href="admin-contenido.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Contenido
+      </a>
+      <a href="admin-configuracion.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Configuración
+      </a>
+      <div class="lx-nav-divider"></div>
+      <a href="index.html" class="lx-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Ver Sitio
+      </a>
+    </nav>
+    <div class="lx-sidebar-footer">
+      <button class="lx-nav-link lx-btn-danger" id="logoutBtn" style="border:none;cursor:pointer;width:100%">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Cerrar Sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="lx-main">
+    <div class="lx-topbar">
+      <div>
+        <div class="lx-topbar-title">Gestión de Productos</div>
+        <div class="lx-topbar-subtitle">Administra el catálogo de tu joyería</div>
+      </div>
+      <div class="lx-topbar-right">
+        <button class="lx-btn lx-btn-gold" id="addProductBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Nuevo Producto
+        </button>
+        <span class="lx-admin-badge">✦ Admin</span>
+      </div>
+    </div>
+
+    <div class="lx-content">
+      <div class="lx-card">
+        <!-- Tabs -->
+        <div class="lx-tabs" style="flex-wrap:wrap">
+          <button class="lx-tab active" data-category="all">
+            Todos <span class="lx-tab-count" id="countAll">0</span>
+          </button>
+          <button class="lx-tab" data-category="cadenas">
+            Cadenas <span class="lx-tab-count" id="countCadenas">0</span>
+          </button>
+          <button class="lx-tab" data-category="anillos">
+            Anillos <span class="lx-tab-count" id="countAnillos">0</span>
+          </button>
+          <button class="lx-tab" data-category="pulseras">
+            Pulseras <span class="lx-tab-count" id="countPulseras">0</span>
+          </button>
+          <button class="lx-tab" data-category="aretes">
+            Aretes <span class="lx-tab-count" id="countAretes">0</span>
+          </button>
+          <button class="lx-tab" data-category="dijes">
+            Dijes <span class="lx-tab-count" id="countDijes">0</span>
+          </button>
+          <button class="lx-tab" data-category="camandulas">
+            Camándulas <span class="lx-tab-count" id="countCamandulas">0</span>
+          </button>
+          <button class="lx-tab" data-category="manillas">
+            Manillas <span class="lx-tab-count" id="countManillas">0</span>
+          </button>
+          <button class="lx-tab" data-category="separadores">
+            Separadores <span class="lx-tab-count" id="countSeparadores">0</span>
+          </button>
+          <button class="lx-tab" data-category="tobilleras">
+            Tobilleras <span class="lx-tab-count" id="countTobilleras">0</span>
+          </button>
+          <button class="lx-tab" data-category="pulseras-ninos">
+            Pulseras Niños <span class="lx-tab-count" id="countPulserasNinos">0</span>
+          </button>
+          <button class="lx-tab" data-category="candongas">
+            Candongas <span class="lx-tab-count" id="countCandongas">0</span>
+          </button>
+        </div>
+
+        <!-- Tabla -->
+        <div class="lx-table-wrap">
+          <table class="lx-table">
+            <thead>
+              <tr>
+                <th style="width:70px">Imagen</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Descuento</th>
+                <th>Destacado</th>
+                <th style="width:130px">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody">
+              <tr><td colspan="8" style="text-align:center;padding:2.5rem;color:#9e8c6c">
+                <em>Cargando productos…</em>
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MODAL AGREGAR / EDITAR ══ -->
+  <div class="lx-modal-overlay" id="productModal">
+    <div class="lx-modal lx-modal-lg">
+      <div class="lx-modal-head">
+        <div class="lx-modal-head-title" id="modalTitle">Agregar Producto</div>
+        <button class="lx-modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="lx-modal-body">
+        <form id="productForm">
+          <input type="hidden" id="productId">
+          <input type="hidden" id="productImageData">
+          <input type="hidden" id="productImageUrl">
+
+          <div class="lx-form-grid">
+            <div class="lx-form-group">
+              <label class="lx-form-label">Nombre <span class="required">*</span></label>
+              <input type="text" id="productName" class="lx-input" placeholder="Ej: Cadena Eslabón Cubano" required>
+            </div>
+
+            <div class="lx-form-group">
+              <label class="lx-form-label">Categoría <span class="required">*</span></label>
+              <select id="productCategory" class="lx-select" required>
+                <option value="">Seleccionar categoría…</option>
+                <option value="cadenas">Cadenas</option>
+                <option value="anillos">Anillos</option>
+                <option value="pulseras">Pulseras</option>
+                <option value="aretes">Aretes</option>
+                <option value="dijes">Dijes</option>
+                <option value="camandulas">Camándulas</option>
+                <option value="manillas">Manillas</option>
+                <option value="separadores">Separadores</option>
+                <option value="tobilleras">Tobilleras</option>
+                <option value="pulseras-ninos">Pulseras Niños</option>
+                <option value="candongas">Candongas</option>
+              </select>
+            </div>
+
+            <div class="lx-form-group">
+              <label class="lx-form-label">Precio COP <span class="required">*</span></label>
+              <input type="number" id="productPrice" class="lx-input" min="0" step="1000" placeholder="0" required>
+            </div>
+
+            <div class="lx-form-group">
+              <label class="lx-form-label">Stock <span class="required">*</span></label>
+              <input type="number" id="productStock" class="lx-input" min="0" value="0" required>
+            </div>
+
+            <div class="lx-form-group lx-form-grid-full">
+              <label class="lx-form-label">Imagen</label>
+              <div class="lx-upload-zone" id="uploadZone" onclick="document.getElementById('productImage').click()">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" style="display:block;margin:0 auto">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <p>Clic para subir imagen · PNG, JPG, WebP · Máx 5 MB</p>
+              </div>
+              <input type="file" id="productImage" accept="image/*" style="display:none">
+              <div id="imagePreview" style="margin-top:.75rem"></div>
+            </div>
+
+            <div class="lx-form-group lx-form-grid-full">
+              <label class="lx-form-label">Descripción</label>
+              <textarea id="productDescription" class="lx-textarea" placeholder="Describe el producto con detalle…"></textarea>
+            </div>
+
+            <div class="lx-form-group">
+              <label class="lx-form-label">Descuento % <span style="color:#9e8c6c;font-size:.8rem">(0 = sin descuento)</span></label>
+              <input type="number" id="productDiscount" class="lx-input" min="0" max="100" value="0" placeholder="0">
+            </div>
+
+            <div class="lx-form-group">
+              <!-- espacio de alineación -->
+            </div>
+
+            <div class="lx-form-group lx-form-grid-full">
+              <label class="lx-checkbox-label">
+                <input type="checkbox" id="productFeatured">
+                <span class="lx-checkbox-box"></span>
+                Mostrar como producto destacado en la página principal
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="lx-modal-foot">
+        <button type="button" class="lx-btn lx-btn-ghost" id="cancelBtn">Cancelar</button>
+        <button type="button" class="lx-btn lx-btn-gold" id="saveBtn"
+          onclick="document.getElementById('productForm').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MODAL ELIMINAR ══ -->
+  <div class="lx-modal-overlay" id="deleteModal">
+    <div class="lx-modal lx-modal-sm">
+      <div class="lx-modal-head">
+        <div class="lx-modal-head-title" style="color:#c0392b">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" style="margin-right:.35rem">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Confirmar eliminación
+        </div>
+        <button class="lx-modal-close" id="closeDeleteModal">&times;</button>
+      </div>
+      <div class="lx-modal-body" style="text-align:center;padding:2rem 2rem 1rem">
+        <p style="font-size:.95rem;color:#3a3020;font-weight:600;margin-bottom:.5rem">¿Eliminar este producto?</p>
+        <p style="font-size:.82rem;color:#7a6e58">Esta acción no se puede deshacer.</p>
+      </div>
+      <div class="lx-modal-foot">
+        <button type="button" class="lx-btn lx-btn-ghost" id="cancelDelete">Cancelar</button>
+        <button type="button" class="lx-btn lx-btn-danger" id="confirmDelete">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6"/>
+            <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+          </svg>
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    if (!isLoggedIn() || !isAdmin()) window.location.href = 'index.html';
+
+    let currentCategory = 'all';
+    let deleteProductId = null;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadProductsTable();
+      await updateCategoryCounts();
+      initProductModal();
+      initDeleteModal();
+    });
+
+    /* ── TABS ── */
+    document.querySelectorAll('.lx-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.lx-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        currentCategory = this.dataset.category;
+        loadProductsTable();
+      });
+    });
+
+    /* ── ABRIR MODAL NUEVO ── */
+    document.getElementById('addProductBtn').addEventListener('click', () => {
+      document.getElementById('modalTitle').textContent = 'Agregar Nuevo Producto';
+      document.getElementById('productForm').reset();
+      document.getElementById('productId').value = '';
+      document.getElementById('productImageData').value = '';
+      document.getElementById('imagePreview').innerHTML = '';
+      document.getElementById('productModal').classList.add('active');
+    });
+
+    document.getElementById('closeModal').addEventListener('click', closeProductModal);
+    document.getElementById('cancelBtn').addEventListener('click', closeProductModal);
+    document.getElementById('productModal').addEventListener('click', e => {
+      if (e.target.id === 'productModal') closeProductModal();
+    });
+    function closeProductModal() {
+      document.getElementById('productModal').classList.remove('active');
+    }
+
+    /* ── PREVIEW IMAGEN ── */
+    document.getElementById('productImage').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      if (file.size > 5 * 1024 * 1024) {
+        showNotification('Imagen demasiado grande. Máximo 5 MB.', 'error');
+        this.value = '';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = evt => {
+        document.getElementById('productImageData').value = evt.target.result;
+        document.getElementById('imagePreview').innerHTML =
+          `<img src="${evt.target.result}" class="lx-img-preview visible">`;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    /* ── SUBMIT FORMULARIO ── */
+    function initProductModal() {
+      document.getElementById('productForm').addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = document.getElementById('saveBtn');
+        const orig = btn.innerHTML;
+        btn.disabled = true; btn.textContent = 'Guardando…';
+        try {
+          const id = document.getElementById('productId').value;
+          const payload = {
+            nombre:      document.getElementById('productName').value.trim(),
+            descripcion: document.getElementById('productDescription').value.trim(),
+            categoria:   document.getElementById('productCategory').value,
+            precio:      parseFloat(document.getElementById('productPrice').value),
+            stock:       parseInt(document.getElementById('productStock').value) || 0,
+            imagen:      document.getElementById('productImageData').value ||
+                         document.getElementById('productImageUrl').value || '',
+            destacado:   document.getElementById('productFeatured').checked,
+            descuento:   parseInt(document.getElementById('productDiscount').value) || 0,
+            atributos:   []
+          };
+          if (!payload.nombre)    throw new Error('El nombre es requerido');
+          if (!payload.categoria) throw new Error('Selecciona una categoría');
+          if (payload.precio <= 0) throw new Error('El precio debe ser mayor a 0');
+
+          if (id) {
+            await ProductosAPI.actualizar(id, payload);
+            showNotification('Producto actualizado exitosamente', 'success');
+          } else {
+            await ProductosAPI.crear(payload);
+            showNotification('Producto creado exitosamente', 'success');
+          }
+          closeProductModal();
+          await loadProductsTable();
+          await updateCategoryCounts();
+        } catch (err) {
+          showNotification('Error: ' + (err.message || 'Ocurrió un problema'), 'error');
+        } finally {
+          btn.disabled = false; btn.innerHTML = orig;
+        }
+      });
+    }
+
+    /* ── MODAL DELETE ── */
+    function initDeleteModal() {
+      document.getElementById('cancelDelete').addEventListener('click', closeDeleteModal);
+      document.getElementById('closeDeleteModal').addEventListener('click', closeDeleteModal);
+      document.getElementById('deleteModal').addEventListener('click', e => {
+        if (e.target.id === 'deleteModal') closeDeleteModal();
+      });
+      document.getElementById('confirmDelete').addEventListener('click', async () => {
+        if (!deleteProductId) return;
+        const btn = document.getElementById('confirmDelete');
+        const orig = btn.innerHTML;
+        btn.disabled = true; btn.textContent = 'Eliminando…';
+        try {
+          await ProductosAPI.eliminar(deleteProductId);
+          showNotification('Producto eliminado', 'success');
+          deleteProductId = null;
+          closeDeleteModal();
+          await loadProductsTable();
+          await updateCategoryCounts();
+        } catch (err) {
+          showNotification('Error: ' + (err.message || 'No se pudo eliminar'), 'error');
+        } finally {
+          btn.disabled = false; btn.innerHTML = orig;
+        }
+      });
+    }
+    function closeDeleteModal() {
+      document.getElementById('deleteModal').classList.remove('active');
+      deleteProductId = null;
+    }
+
+    /* ── TABLA ── */
+    const catBadge = {
+      cadenas:'lx-badge-blue', anillos:'lx-badge-pink',
+      pulseras:'lx-badge-purple', aretes:'lx-badge-gold'
+    };
+
+    async function loadProductsTable() {
+      const tbody = document.getElementById('productsTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:2.5rem;color:#9e8c6c"><em>Cargando…</em></td></tr>`;
+      try {
+        const cat = currentCategory !== 'all' ? currentCategory : null;
+        const productos = await ProductosAPI.listar(cat);
+        if (!productos?.length) {
+          tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:2.5rem;color:#9e8c6c"><em>No hay productos en esta categoría</em></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = productos.map(p => `
+          <tr>
+            <td>
+              <img src="${p.imagen || 'public/placeholder.jpg'}" alt="${p.nombre}"
+                   style="width:52px;height:52px;object-fit:cover;border-radius:8px;border:1px solid #ede8de"
+                   onerror="this.src='public/placeholder.jpg'">
+            </td>
+            <td style="font-weight:600;color:#1a1208">${p.nombre}</td>
+            <td><span class="lx-badge ${catBadge[p.categoria] || 'lx-badge-gold'}">${capitalize(p.categoria)}</span></td>
+            <td style="font-weight:700;color:#d4af37">$${Number(p.precio).toLocaleString('es-CO')}</td>
+            <td style="color:#3a3020">${p.stock}</td>
+            <td>
+              ${(p.descuento > 0)
+                ? '<span class="lx-badge lx-badge-pink">-' + p.descuento + '%</span>'
+                : '<span class="lx-badge" style="background:#f3f4f6;color:#9ca3af;border-color:#e5e7eb">—</span>'}
+            </td>
+            <td>
+              ${p.destacado
+                ? '<span class="lx-badge lx-badge-green">✓ Sí</span>'
+                : '<span class="lx-badge" style="background:#f3f4f6;color:#9ca3af;border-color:#e5e7eb">No</span>'}
+            </td>
+            <td>
+              <div style="display:flex;gap:.4rem">
+                <button class="lx-btn lx-btn-ghost lx-btn-sm" onclick="editProduct('${p.id}')" title="Editar">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                  </svg>
+                  Editar
+                </button>
+                <button class="lx-btn lx-btn-danger lx-btn-sm" onclick="deleteProduct('${p.id}')" title="Eliminar">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>`).join('');
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="8" style="color:#dc2626;text-align:center;padding:1.5rem">⚠ Error: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function editProduct(id) {
+      try {
+        const p = await ProductosAPI.obtener(id);
+        document.getElementById('modalTitle').textContent = 'Editar Producto';
+        document.getElementById('productId').value          = p.id;
+        document.getElementById('productName').value        = p.nombre || '';
+        document.getElementById('productCategory').value    = p.categoria || '';
+        document.getElementById('productPrice').value       = p.precio || 0;
+        document.getElementById('productStock').value       = p.stock || 0;
+        document.getElementById('productDescription').value = p.descripcion || '';
+        document.getElementById('productFeatured').checked  = p.destacado || false;
+        document.getElementById('productDiscount').value    = p.descuento || 0;
+        document.getElementById('productImageData').value   = '';
+        const urlEl = document.getElementById('productImageUrl');
+        if (urlEl) urlEl.value = p.imagen || '';
+        if (p.imagen) {
+          document.getElementById('imagePreview').innerHTML =
+            `<img src="${p.imagen}" class="lx-img-preview visible" onerror="this.style.display='none'">`;
+        }
+        document.getElementById('productModal').classList.add('active');
+      } catch (err) {
+        showNotification('Error al cargar producto: ' + err.message, 'error');
+      }
+    }
+
+    function deleteProduct(id) {
+      deleteProductId = id;
+      document.getElementById('deleteModal').classList.add('active');
+    }
+
+    async function updateCategoryCounts() {
+      try {
+        const todos = await ProductosAPI.listar();
+        const c = cat => todos.filter(p => p.categoria === cat).length;
+        const s = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+        s('countAll', todos.length);
+        s('countCadenas', c('cadenas'));
+        s('countAnillos', c('anillos'));
+        s('countPulseras', c('pulseras'));
+        s('countAretes', c('aretes'));
+        s('countDijes', c('dijes'));
+        s('countCamandulas', c('camandulas'));
+        s('countManillas', c('manillas'));
+        s('countSeparadores', c('separadores'));
+        s('countTobilleras', c('tobilleras'));
+        s('countPulserasNinos', c('pulseras-ninos'));
+        s('countCandongas', c('candongas'));
+      } catch {}
+    }
+
+    document.getElementById('logoutBtn')?.addEventListener('click', () => {
+      if (confirm('¿Cerrar sesión?')) AuthAPI.logout();
+    });
+
+    function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+
+    function showNotification(msg, type = 'success') {
+      document.querySelectorAll('.lx-toast').forEach(t => t.remove());
+      const colors = { success:'#059669', error:'#dc2626', info:'#2563eb' };
+      const n = document.createElement('div');
+      n.className = 'lx-toast ' + type;
+      n.style.borderLeftColor = colors[type] || colors.success;
+      n.innerHTML = `<span>${msg}</span>`;
+      document.body.appendChild(n);
+      setTimeout(() => n.remove(), 3500);
+    }
+  </script>
+</body>
+</html>

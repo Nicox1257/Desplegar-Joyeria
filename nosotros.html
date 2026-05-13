@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Luxara Joyería</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="public/logo.png" type="image/png">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <a href="productos.html?categoria=cadenas" class="top-bar-link">Cadenas</a>
+        <a href="productos.html?categoria=pulseras" class="top-bar-link">Pulseras</a>
+        <a href="productos.html?categoria=aretes" class="top-bar-link">Aretes</a>
+        <a href="productos.html?categoria=anillos" class="top-bar-link">Anillos</a>
+        <a href="productos.html?categoria=dijes" class="top-bar-link">Dijes</a>
+        <a href="productos.html?ofertas=true" class="top-bar-link sale">Ofertas</a>
+        <a href="productos.html?nuevos=true" class="top-bar-link highlight">Nuevos</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="public/logo.png" alt="Luxara Joyería">
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle">
+              Productos
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+              <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+              <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+              <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+              <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+              <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+              <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+              <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+              <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+              <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+              <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+            </div>
+          </div>
+          <a href="nosotros.html" class="nav-link active">Nosotros</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+          <a href="productos.html?ofertas=true" class="nav-link nav-ofertas">Ofertas</a>
+          <a href="productos.html?nuevos=true" class="nav-link nav-nuevos">Nuevos</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="lista-deseos.html" class="icon-button" title="Lista de Deseos">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span class="wishlist-badge" id="wishlistBadge">0</span>
+          </a>
+          <a href="carrito.html" class="icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 2L7 6H3L6 20H18L21 6H17L15 2H9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="20" r="1"/><circle cx="15" cy="20" r="1"/>
+            </svg>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </a>
+          <button class="icon-button" id="adminLoginBtn" title="Mi Cuenta">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-mobile" id="mobileMenu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <div class="nav-dropdown-mobile">
+          <button class="nav-link dropdown-toggle-mobile">Productos</button>
+          <div class="dropdown-menu-mobile">
+            <a href="productos.html?categoria=cadenas" class="dropdown-item">Cadenas</a>
+            <a href="productos.html?categoria=anillos" class="dropdown-item">Anillos</a>
+            <a href="productos.html?categoria=pulseras" class="dropdown-item">Pulseras</a>
+            <a href="productos.html?categoria=aretes" class="dropdown-item">Aretes</a>
+            <a href="productos.html?categoria=dijes" class="dropdown-item">Dijes</a>
+            <a href="productos.html?categoria=camandulas" class="dropdown-item">Camándulas</a>
+            <a href="productos.html?categoria=manillas" class="dropdown-item">Manillas</a>
+            <a href="productos.html?categoria=separadores" class="dropdown-item">Separadores</a>
+            <a href="productos.html?categoria=tobilleras" class="dropdown-item">Tobilleras</a>
+            <a href="productos.html?categoria=pulseras-ninos" class="dropdown-item">Pulseras Niños</a>
+            <a href="productos.html?categoria=candongas" class="dropdown-item">Candongas</a>
+          </div>
+        </div>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       NOSOTROS — CONTENIDO COMPLETO
+  ═══════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO BANNER ── -->
+    <section style="
+      position:relative;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1208 50%, #0d0c07 100%);
+      padding: 6rem 0;
+      overflow: hidden;
+      text-align: center;
+    ">
+      <!-- Decorativo fondo dorado difuso -->
+      <div style="
+        position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+        width:600px;height:600px;
+        background:radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);
+        pointer-events:none;
+      "></div>
+      <div class="container" style="position:relative;z-index:1">
+        <p style="color:var(--color-gold);font-size:.9rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;margin-bottom:1rem">— Nuestra Historia —</p>
+        <h1 style="font-family:var(--font-serif);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.5rem">
+          Más que una joyería,<br><span style="color:var(--color-gold)">una pasión hecha oro</span>
+        </h1>
+        <p style="color:rgba(255,255,255,0.75);font-size:1.2rem;max-width:680px;margin:0 auto 2.5rem;line-height:1.8">
+          Desde Villavicencio, Colombia, llevamos elegancia y distinción a quienes valoran la belleza auténtica del oro laminado de 18K.
+        </p>
+        <a href="productos.html" style="
+          display:inline-block;
+          padding:1rem 2.5rem;
+          background:linear-gradient(135deg,var(--color-gold),var(--color-gold-light));
+          color:#000;font-weight:700;text-decoration:none;
+          border-radius:4px;text-transform:uppercase;letter-spacing:.08em;
+          box-shadow:0 4px 24px rgba(212,175,55,0.4);
+          transition:transform .2s,box-shadow .2s;
+        " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(212,175,55,0.55)'"
+           onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(212,175,55,0.4)'">
+          Explorar Colección
+        </a>
+      </div>
+    </section>
+
+    <!-- ── STATS ── -->
+    <section style="background:var(--color-gold);padding:3rem 0">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center">
+          <div>
+            <div style="font-family:var(--font-serif);font-size:2.8rem;font-weight:700;color:#000;line-height:1">500+</div>
+            <div style="font-size:.85rem;font-weight:600;color:rgba(0,0,0,0.7);text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem">Clientes Felices</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-serif);font-size:2.8rem;font-weight:700;color:#000;line-height:1">18K</div>
+            <div style="font-size:.85rem;font-weight:600;color:rgba(0,0,0,0.7);text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem">Oro Laminado Premium</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-serif);font-size:2.8rem;font-weight:700;color:#000;line-height:1">11</div>
+            <div style="font-size:.85rem;font-weight:600;color:rgba(0,0,0,0.7);text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem">Categorías de Joyas</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-serif);font-size:2.8rem;font-weight:700;color:#000;line-height:1">100%</div>
+            <div style="font-size:.85rem;font-weight:600;color:rgba(0,0,0,0.7);text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem">Satisfacción Garantizada</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NUESTRA HISTORIA ── -->
+    <section style="padding:5rem 0;background:#fff">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+          <div>
+            <p style="color:var(--color-gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem">Nuestra Historia</p>
+            <h2 style="font-family:var(--font-serif);font-size:2.4rem;font-weight:700;color:var(--color-gray-900);line-height:1.2;margin-bottom:1.5rem">
+              Nació de una pasión por la joyería artesanal
+            </h2>
+            <p style="color:var(--color-gray-600);line-height:1.9;margin-bottom:1.2rem;font-size:1.05rem">
+              Luxara Joyería nació con un propósito claro: democratizar la elegancia. Sabíamos que la belleza del oro no debería ser exclusiva de pocos, y por eso creamos piezas de <strong>oro laminado de 18K de la más alta calidad</strong>, accesibles sin sacrificar ni un gramo de distinción.
+            </p>
+            <p style="color:var(--color-gray-600);line-height:1.9;font-size:1.05rem">
+              Desde Villavicencio, Colombia, nuestras joyas viajan por todo el país llevando historias, emociones y momentos únicos. Cada pieza sale de nuestras manos con el mismo cuidado con que llegaría a las tuyas.
+            </p>
+            <div style="margin-top:2rem;padding:1.5rem;border-left:3px solid var(--color-gold);background:rgba(212,175,55,0.05);border-radius:0 8px 8px 0">
+              <p style="font-family:var(--font-serif);font-size:1.1rem;font-style:italic;color:var(--color-gray-700)">
+                "Cada joya que crea Luxara lleva consigo el brillo de quien la usa y la pasión de quienes la hicieron."
+              </p>
+            </div>
+          </div>
+          <div style="position:relative">
+            <img src="public/elegant-gold-plated-jewelry-necklaces-bracelets-on.jpg"
+                 alt="Joyería Luxara"
+                 style="width:100%;border-radius:1rem;box-shadow:0 20px 60px rgba(0,0,0,0.15)">
+            <div style="
+              position:absolute;bottom:-1.5rem;left:-1.5rem;
+              background:var(--color-gold);
+              padding:1.5rem 2rem;border-radius:.75rem;
+              box-shadow:0 8px 32px rgba(212,175,55,0.4);
+            ">
+              <div style="font-family:var(--font-serif);font-size:1.8rem;font-weight:700;color:#000;line-height:1">Oro 18K</div>
+              <div style="font-size:.8rem;color:rgba(0,0,0,0.7);font-weight:600;text-transform:uppercase;letter-spacing:.06em">Calidad garantizada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MISIÓN Y VISIÓN ── -->
+    <section style="padding:5rem 0;background:var(--color-gray-50)">
+      <div class="container">
+        <p style="text-align:center;color:var(--color-gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem">Quiénes Somos</p>
+        <h2 style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--color-gray-900);text-align:center;margin-bottom:3rem">Nuestra Misión y Visión</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem">
+          <!-- Misión -->
+          <div style="background:#fff;border-radius:1rem;padding:2.5rem;border:1px solid var(--color-gray-200);transition:all .3s"
+               onmouseover="this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)';this.style.borderColor='var(--color-gold)'"
+               onmouseout="this.style.boxShadow='';this.style.borderColor='var(--color-gray-200)'">
+            <div style="width:64px;height:64px;background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.05));border-radius:.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--color-gold)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--color-gold);margin-bottom:1rem">Nuestra Misión</h3>
+            <p style="color:var(--color-gray-600);line-height:1.8;font-size:1rem">
+              Crear y ofrecer joyas de oro laminado 18K de la más alta calidad, accesibles para todos, llevando elegancia y distinción a cada persona que quiera lucir única. Nos comprometemos con la satisfacción total de nuestros clientes en cada compra.
+            </p>
+          </div>
+          <!-- Visión -->
+          <div style="background:#fff;border-radius:1rem;padding:2.5rem;border:1px solid var(--color-gray-200);transition:all .3s"
+               onmouseover="this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)';this.style.borderColor='var(--color-gold)'"
+               onmouseout="this.style.boxShadow='';this.style.borderColor='var(--color-gray-200)'">
+            <div style="width:64px;height:64px;background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.05));border-radius:.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--color-gold)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--color-gold);margin-bottom:1rem">Nuestra Visión</h3>
+            <p style="color:var(--color-gray-600);line-height:1.8;font-size:1rem">
+              Ser la joyería de referencia en Colombia y Latinoamérica, reconocida por la excelencia en oro laminado 18K, el servicio personalizado y la confianza que depositamos en cada cliente. Queremos que Luxara sea sinónimo de brillo, amor y elegancia auténtica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VALORES ── -->
+    <section style="padding:5rem 0;background:#fff">
+      <div class="container">
+        <p style="text-align:center;color:var(--color-gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem">Lo que nos define</p>
+        <h2 style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--color-gray-900);text-align:center;margin-bottom:3rem">Nuestros Valores</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Calidad Premium</h3>
+            <p class="value-description">Utilizamos solo los mejores materiales y técnicas de fabricación para garantizar joyas duraderas y hermosas que perduran en el tiempo.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Atención Personalizada</h3>
+            <p class="value-description">Cada cliente es único. Te acompañamos desde la elección hasta la entrega, asegurándonos de que tu experiencia de compra sea memorable.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Confianza Total</h3>
+            <p class="value-description">Construimos relaciones duraderas basadas en la transparencia, honestidad y compromiso inquebrantable con nuestros clientes.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Pasión Artesanal</h3>
+            <p class="value-description">Cada joya es creada con amor y dedicación. No vendemos simples accesorios — vendemos piezas que tocan el corazón de quien las lleva.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="3" width="15" height="13"/><path d="m16 8 6 4-6 4V8z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Envíos Seguros</h3>
+            <p class="value-description">Enviamos a todo Colombia con embalaje especial y seguimiento en tiempo real, porque tu joya merece llegar perfecta a tus manos.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Exclusividad</h3>
+            <p class="value-description">Nuestros diseños son cuidadosamente seleccionados para ofrecerte piezas únicas que destacan tu personalidad y estilo propio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESO ── -->
+    <section style="padding:5rem 0;background:var(--color-gray-50)">
+      <div class="container">
+        <p style="text-align:center;color:var(--color-gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem">Cómo trabajamos</p>
+        <h2 style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--color-gray-900);text-align:center;margin-bottom:3.5rem">Nuestro Proceso de Calidad</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center">
+          <div style="position:relative">
+            <div style="width:70px;height:70px;background:var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:#000;font-family:var(--font-serif);font-size:1.5rem;font-weight:700">1</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--color-gray-900);margin-bottom:.75rem">Selección de Materiales</h4>
+            <p style="color:var(--color-gray-600);font-size:.9rem;line-height:1.7">Elegimos cuidadosamente el oro laminado 18K de los mejores proveedores, garantizando resistencia y brillo excepcional.</p>
+          </div>
+          <div>
+            <div style="width:70px;height:70px;background:var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:#000;font-family:var(--font-serif);font-size:1.5rem;font-weight:700">2</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--color-gray-900);margin-bottom:.75rem">Diseño y Creación</h4>
+            <p style="color:var(--color-gray-600);font-size:.9rem;line-height:1.7">Cada pieza es diseñada con atención meticulosa al detalle, combinando tendencias modernas con la atemporalidad del oro.</p>
+          </div>
+          <div>
+            <div style="width:70px;height:70px;background:var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:#000;font-family:var(--font-serif);font-size:1.5rem;font-weight:700">3</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--color-gray-900);margin-bottom:.75rem">Control de Calidad</h4>
+            <p style="color:var(--color-gray-600);font-size:.9rem;line-height:1.7">Antes de llegar a ti, cada joya pasa por un riguroso control de calidad para asegurar que cumpla con nuestros estándares más altos.</p>
+          </div>
+          <div>
+            <div style="width:70px;height:70px;background:var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:#000;font-family:var(--font-serif);font-size:1.5rem;font-weight:700">4</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--color-gray-900);margin-bottom:.75rem">Entrega Especial</h4>
+            <p style="color:var(--color-gray-600);font-size:.9rem;line-height:1.7">Empacamos cada pedido con amor y lo enviamos de forma segura para que llegue perfecto a sus manos en cualquier rincón de Colombia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA FINAL ── -->
+    <section style="
+      background:linear-gradient(135deg,#0d0c07 0%,#1a1208 50%,#0a0a0a 100%);
+      padding:5rem 0;text-align:center;
+    ">
+      <div class="container">
+        <p style="color:var(--color-gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem">¿Lista para brillar?</p>
+        <h2 style="font-family:var(--font-serif);font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.2">
+          Descubre tu joya perfecta
+        </h2>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;max-width:560px;margin:0 auto 2.5rem;line-height:1.7">
+          Explora toda nuestra colección de oro laminado 18K y encuentra la pieza que expresa exactamente quién eres.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="productos.html" style="
+            display:inline-block;
+            padding:1rem 2.5rem;
+            background:linear-gradient(135deg,var(--color-gold),var(--color-gold-light));
+            color:#000;font-weight:700;text-decoration:none;
+            border-radius:4px;text-transform:uppercase;letter-spacing:.08em;
+            box-shadow:0 4px 24px rgba(212,175,55,0.4);
+          ">Ver Colección</a>
+          <a href="contacto.html" style="
+            display:inline-block;
+            padding:1rem 2.5rem;
+            background:transparent;
+            color:var(--color-gold);font-weight:700;text-decoration:none;
+            border-radius:4px;text-transform:uppercase;letter-spacing:.08em;
+            border:2px solid var(--color-gold);
+          ">Contáctanos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="public/logo.png" alt="Luxara Joyería" class="footer-logo">
+          <p class="footer-text">Elegancia y distinción en cada pieza</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-title">Enlaces</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-title">Contacto</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+573245573332">+57 324 557 3332</a></li>
+            <li><a href="mailto:luxarajoyeria@gmail.com">luxarajoyeria@gmail.com</a></li>
+            <li>Villavicencio, Colombia</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-title">Síguenos</h3>
+          <div class="social-links">
+            <a href="https://instagram.com/luxarajoyeria" target="_blank" class="social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/573245573332" target="_blank" class="social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Luxara Joyería. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
